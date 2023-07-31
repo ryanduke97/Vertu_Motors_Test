@@ -246,23 +246,23 @@
                 let position = 0;
 
                 function slideCarousel() {
-                container.style.transform = `translateX(${position}px)`;
+                    container.style.transform = `translateX(${position}px)`;
                 }
 
                 function slideLeft() {
-                position += itemWidth;
-                if (position > 0) {
-                    position = -(itemWidth * (items.length - 1));
-                }
-                slideCarousel();
+                    position += itemWidth;
+                    if (position > 0) {
+                        position = -(itemWidth * (items.length - 1));
+                    }
+                    slideCarousel();
                 }
 
                 function slideRight() {
-                position -= itemWidth;
-                if (position < -(itemWidth * (items.length - 1))) {
-                    position = 0;
-                }
-                slideCarousel();
+                    position -= itemWidth;
+                    if (position < -(itemWidth * (items.length - 1))) {
+                        position = 0;
+                    }
+                    slideCarousel();
                 }
 
                 document.querySelector("#left-button").addEventListener("click", slideLeft);
